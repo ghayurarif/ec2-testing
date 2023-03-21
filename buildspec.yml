@@ -1,0 +1,14 @@
+phases:
+  install:
+    runtime-versions:
+      nodejs: 19.x
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - npm run build
+      - npm run start:prod
+  post_build:
+    commands:
+      - echo Build completed on `date`
